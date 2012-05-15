@@ -1,0 +1,40 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OEF4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            var aantalProviders, provider, vastePrijs, aantalMaanden, prijsMaand, providers = [], goedkoopstePrijs = 0, goedkoopsteNaam;
+            
+            var aantalProviders = parseInt(prompt('Hoeveel providers wil je vergelijken?'), 10);
+            
+            for (var i = 0; i = aantalProviders; ++i) {
+                provider = prompt('Naam provider 1 :');
+                vastePrijs = parseInt(prompt('Vaste prijs voor '+ provider), 10);
+                aantalMaanden = parseInt(prompt('Verplicht aantal maanden voor '+ provider), 10);
+                prijsMaand = vastePrijs / aantalMaanden;
+                alert('De prijs per maand voor ' + provider + ' is ' + prijsMaand);
+                
+                providers[i].push= { naam: provider, prijs: prijsMaand };
+            }
+        
+            for (var j = 0; j <= (providers.length)-1; ++j) {
+                
+                if (providers[j].prijs < goedkoopstePrijs){
+                    goedkoopsteNaam = providers[j].naam;
+                    goedkoopstePrijs = providers[j].prijs;
+                } 
+            }
+            
+            alert('De goedkoopste is ' + goedkoopsteNaam + ' met ' + goedkoopstePrijs + 'euro per maand');
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OEF3</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            function room(length, width, height) {
+                return length * height * 2 + width * height * 2;
+            }
+            
+            var length = parseInt(prompt('Lengte?'), 10);
+            var width = parseInt(prompt('Breedte?'), 10);
+            var height = parseInt(prompt('Hoogte?'), 10);
+            
+            alert(room(length, width, height) + 'm2');
+            
+        </script>
+    </body>
+</html>
