@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>Dit het p element</p>
+        <ul>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+            <li>eerste</li>
+        </ul>
+        <script>
+            $(document).ready(cssFunction);
+            
+            function cssFunction(){
+                var pElements = $('p'); // select all LI elements in the page
+                pElements.css({
+                  background: '#CCC',// find all the newly added spans
+                  color: '#f00', // give them a gray color
+                  fontWeight: 'bold' // make them bold
+                });
+                var elements = $('li'); // select all LI elements in the page
+                elements.css('background', '#CCC'); // give them a gray backgroundcolor
+                elements.each(function(index, elm) { // loop over them
+                  $(elm).prepend('<span class="counter">' + (index + 1) + '. </span>'); // prepend a span with a number to the LI elm
+                });
+                elements.find('.counter').css({ // find all the newly added spans
+                  color: '#666', // give them a gray color
+                  fontWeight: 'bold' // make them bold
+                });
+            }
+        </script>
+        <p>Dit is het 2de p element</p>
+    </body>
+</html>

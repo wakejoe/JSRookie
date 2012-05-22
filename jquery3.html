@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery 3</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>test</p>
+        <script>
+            var overlayDiv = $('<div id="overlay"><p>kdkdkdkdkkdkdkdkdkdkdkdkkdkdkd</p><p>ljhadslkfjhaslkfdjhalkjfh</p></div>');
+            $('body').append(overlayDiv);
+            $(instellen);
+            
+            function instellen(){
+              $('#overlay').css({
+                  width: '100%',
+                  background: 'rgba(9, 9, 9, 0.5)',
+                  height: '100%',
+                  position: 'absolute',
+                  zIndex: 5000,
+                  top: 0,
+                  left: 0
+                });
+                
+            }
+        </script>
+    </body>
+</html>
