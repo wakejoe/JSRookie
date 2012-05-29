@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <p>Test p</p>
+        
+        <p>Nog een p element</p>
+        
+        <script>
+            function clickerdeclick(e) {
+                e.preventDefault();
+                alert('Hallo'); 
+            }
+                        
+            $('p').bind('click focus', clickerdeclick); // hetzelfde als erboven, maar zo kan je meer functions samen doen, hier is het de click en de focus.
+            
+            $('p').live('click focus', clickerdeclick); // Dezelfde functie als live maar bij bind neemt hij enkel de originele status van de pagina over, bij live neemt hij ook de aanpassingen op.
+        </script>
+    </body>
+</html>
