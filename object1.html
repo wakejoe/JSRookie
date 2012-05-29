@@ -13,21 +13,18 @@
         <p>Nog een p element</p>
         
         <script>
-            function clickerdeclick(e) {
-                e.preventDefault();
-                alert('Hallo'); 
-            }
-            
-            function changeContent(e) {
-                e.preventDefault();
-                var element = $(this); // element waarop is geklikt.
-                element.html('This is the new content');
+            var obj = {
+                func1: function() {
+                    alert('Dit is de eerste function');
+                },
                 
-            }
+                func2: function() {
+                    this.func1();
+                }
+                
+            };
             
-            $('a').click(clickerdeclick);
-            
-             $('p').click(changeContent);
+            obj.func2(); // OUTPUT: Dit is de eerst function
             
         </script>
     </body>
