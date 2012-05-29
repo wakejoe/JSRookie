@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <p style="height: 200px; background: red;">Dit is een tekst</p>
+        
+        <script>
+            $('p').click(function(){
+                $(this).fadeOut(3000, swing); //Eerste param is tijd(in miliseconden), 2de param is easing
+            });
+        </script>
+    </body>
+</html>
