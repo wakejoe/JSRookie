@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <figure>
+          <img src="img/1.jpg" alt="1" id="1" class="1"/>
+          <img src="img/2.jpg" alt="2" id="2" class="2"/>
+          <img src="img/3.jpg" alt="3" id="3" class="3"/>
+          <img src="img/4.jpg" alt="4" id="4" class="4"/>
+          <figcaption>numbers</figcaption>
+        </figure>
+        <script>
+             var elm1 = $('img.1');
+             var elm4 = $('img.4');
+             document.getElementById('4').src=elm1.attr('src');
+             document.getElementById('1').src=elm4.attr('src');
+             var elm3 = $('img.3');
+             document.getElementById('4').src=elm3.attr('src');
+        </script>
+    </body>
+</html>

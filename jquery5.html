@@ -6,12 +6,13 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     </head>
     <body>
-        <a href="/?q=test">Test</a>
+        <ul class="menu">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
         <script>
-            var elm = $('a');
-            alert(elm.attr('href')); // /?q=test 
-            alert(elm.prop('href')); // url/?q=test
-            alert(elm.html);
+            $('.menu li:sibling').before('<li>Voor</li>').after('<li>Na</li>');
         </script>
     </body>
 </html>
