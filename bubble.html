@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="papa" style="float:left; width: 200px; background: #333">
+            <div id="kind" style="width: 50px; background: #ccc">
+                <p>Ik ben een kind</p>
+            </div>
+        </div>
+        
+        <script>
+            $('#papa').click(function(){
+               alert('papa'); 
+            });
+            
+            $('#kind').click(function(e){
+                e.stopPropagation(); //Zorgt ervoor dat de function van de parent div niet uitgevoerd wordt; Zonder deze zal alert('papa') ook uitgevoerd worden.
+               alert('kind'); 
+            });
+            
+        </script>
+    </body>
+</html>
